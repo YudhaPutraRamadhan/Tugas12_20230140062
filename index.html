@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Makan Yuk!</title>
+  <link rel="icon" href="image.png" type="image">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #fff6e5;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff6f00;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background-color: #ffa000;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #f57c00;
+    }
+
+    .output {
+      margin-top: 25px;
+      background-color: #fff8e1;
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🍽️ Form Pemesanan Makanan</h2>
+    <form id="orderForm">
+      <label for="nama">Nama Pelanggan</label>
+      <input type="text" id="nama" required>
+
+      <label for="hp">No. HP</label>
+      <input type="text" id="hp" required>
+
+      <label for="menu">Pilih Menu</label>
+      <select id="menu">
+        <option value="Nasi Goreng">Nasi Goreng</option>
+        <option value="Mie Ayam">Mie Ayam</option>
+        <option value="Ayam Bakar">Ayam Bakar</option>
+        <option value="Sate Padang">Sate Padang</option>
+      </select>
+
+      <label for="tanggal">Tanggal Pesan</label>
+      <input type="date" id="tanggal" required>
+
+      <label for="pembayaran">Metode Pembayaran</label>
+      <select id="pembayaran">
+        <option value="Tunai">Tunai</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="E-Wallet">E-Wallet</option>
+      </select>
+
+      <label for="catatan">Catatan Tambahan</label>
+      <textarea id="catatan" rows="3" placeholder="Misalnya: tanpa sambal, tambahkan sendok, dll"></textarea>
+
+      <button type="button" onclick="kirimPesanan()">Kirim Pesanan</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
